@@ -39,6 +39,7 @@
                     <input type="text" placeholder="Correo Electrónico" name="correo" id="">
                     <input type="password" name="contrasena" placeholder="Contraseña">
                     <button>Entrar</button>
+                    <button id = "btn_forgotten_password">¿Olvidaste la contraseña?</button>
 
                 </form>
                 <!-- Register -->
@@ -50,6 +51,16 @@
                     <input type="password" placeholder="Contraseña" name="contrasena" id="">
                     <button>Registrarse</button>
                 </form>
+
+
+                <form action="recuperar.php" method="post" class = "formulario_recupero">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" name="email" required>
+                    <label for="respuesta_seguridad">Respuesta a la Pregunta de Seguridad:</label>
+                    <input type="text" name="respuesta_seguridad" required>
+                    <button type="submit">Enviar</button>
+                </form>
+                
 
             </div>
 

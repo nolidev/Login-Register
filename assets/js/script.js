@@ -1,5 +1,6 @@
 document.getElementById("btn__registrarse").addEventListener("click", register);
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
+document.getElementById("btn__forgotten_password").addEventListener("click", contraseñaOlvidada);
 window.addEventListener("resize", anchoPage);
 
 //Declaracion de variables
@@ -41,6 +42,10 @@ function iniciarSesion(){
         caja_trasera_login.style.display = "none";
     }
     
+}
+
+function contraseñaOlvidada(){
+    document.getElementsByClassName("formulario_recupero").style.display = "block";
 }
 
 /*Pasar a formulario register*/
