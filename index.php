@@ -1,3 +1,4 @@
+<?php include 'php/conexion_be.php'; ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,20 +47,20 @@
                 <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" placeholder="Nombre completo" name="nombre_completo">
-                    <input type="text" placeholder="Correo Electrónico" name="correo">
-                    <input type="text" placeholder="Usuario" name="usuario">
-                    <input type="password" placeholder="Contraseña" name="contrasena">
+                    <input type="text" placeholder="Correo Electrónico" name="email">
+                    <input type="text" placeholder="Usuario" name="username">
+                    <input type="password" placeholder="Contraseña" name="contrasenia">
                     <button id = "btn__registrarse">Registrarse</button>
                 </form>
 
-
+<!-- 
                 <form action="recuperar.php" method="post" class = "formulario_recupero">
                     <label for="email">Correo Electrónico:</label>
                     <input type="email" name="email" required>
                     <label for="respuesta_seguridad">Respuesta a la Pregunta de Seguridad:</label>
                     <input type="text" name="respuesta_seguridad" required>
                     <button type="submit">Enviar</button>
-                </form>
+                </form> -->
                 
 
             </div>

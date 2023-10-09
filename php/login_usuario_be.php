@@ -18,7 +18,7 @@
         echo '
         <script>
         alert("El correo electrónico o la contraseña no son validos.");
-        window.location = "../index.php";
+        window.location = "../index.html";
         </script>
         ';
         exit;

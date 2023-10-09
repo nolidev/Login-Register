@@ -18,7 +18,7 @@
                     text: "El inicio de sesión a la pagina fue exitoso!"
                 }).then(function() {
                     // Redirigir de regreso a la página de inicio
-                    window.location = "../index.php";
+                    window.location = "../index.html";
                 });
             </script>
 </body>
