@@ -16,7 +16,6 @@ if ($conexion->connect_error) {
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 if ($conexion->query($sql) === TRUE) {
     
-
     // Seleccionar la base de datos
     $conexion->select_db($dbname);
 
@@ -32,17 +31,23 @@ if ($conexion->query($sql) === TRUE) {
     )";
     if ($conexion->query($sql) === TRUE) {
         
-
-        // Agregar datos precargados a la tabla
-        $sql = "INSERT INTO usuarios (nombre_completo, username, email, contrasenia, pregunta_seguridad, respuesta) VALUES
-            ('Nombre1 Apellido1', 'usuario1', 'usuario1@example.com', 'contrasenia1', 'Pregunta1', 'Respuesta1'),
-            ('Nombre2 Apellido2', 'usuario2', 'usuario2@example.com', 'contrasenia2', 'Pregunta2', 'Respuesta2'),
-            ('Nombre3 Apellido3', 'usuario3', 'usuario3@example.com', 'contrasenia3', 'Pregunta3', 'Respuesta3')";
-
-        if ($conexion->query($sql) === TRUE) {
-            
+        // Verificar si los datos precargados ya se han insertado
+        $sql_check_data = "SELECT COUNT(*) as count FROM usuarios";
+        $result = $conexion->query($sql_check_data);
+        $row = $result->fetch_assoc();
+        if ($row['count'] == 0) {
+            // Insertar datos precargados solo si la tabla está vacía
+            $sql = "INSERT INTO usuarios (nombre_completo, username, email, contrasenia, pregunta_seguridad, respuesta) VALUES
+                ('Nombre1 Apellido1', 'usuario1', 'usuario1@example.com', 'contrasenia1', 'Pregunta1', 'Respuesta1'),
+                ('Nombre2 Apellido2', 'usuario2', 'usuario2@example.com', 'contrasenia2', 'Pregunta2', 'Respuesta2'),
+                ('Nombre3 Apellido3', 'usuario3', 'usuario3@example.com', 'contrasenia3', 'Pregunta3', 'Respuesta3')";
+            if ($conexion->query($sql) === TRUE) {
+                echo "Datos precargados insertados con éxito.";
+            } else {
+                echo "Error al insertar datos precargados: " . $conexion->error . "\n";
+            }
         } else {
-            echo "Error al insertar datos precargados: " . $conexion->error . "\n";
+            echo "Los datos precargados ya existen en la tabla.";
         }
     } else {
         echo "Error al crear la tabla: " . $conexion->error . "\n";

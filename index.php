@@ -50,7 +50,6 @@
                     <input type="text" placeholder="Correo Electrónico" name="email">
                     <input type="text" placeholder="Usuario" name="username">
                     <input type="password" placeholder="Contraseña" name="contrasenia">
-                    <br>
                     <select id="opciones" name="opciones">
                         <option value="">Pregunta de seguridad</option>
                         <option value="opcion1">Equipo de futbol</option>
