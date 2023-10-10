@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $correo = $_POST["correo"];
+    $correo = $_POST["email"];
     $respuestaUsuario = $_POST["respuesta_seguridad"];
 
 

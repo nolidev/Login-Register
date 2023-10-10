@@ -30,7 +30,9 @@ $sql = "CREATE TABLE IF NOT EXISTS usuarios (
         nombre_completo VARCHAR(50) NOT NULL,
         username VARCHAR(50) NOT NULL,
         email VARCHAR(50) NOT NULL,
-        contrasenia VARCHAR(50) NOT NULL
+        contrasenia VARCHAR(50) NOT NULL,
+        pregunta_seguridad VARCHAR(50) NOT NULL,
+        respuesta VARCHAR(50) NOT NULL
 )";
 if ($conexion->query($sql) === TRUE) {
     echo "Tabla usuarios creada exitosamente o ya existe\n";

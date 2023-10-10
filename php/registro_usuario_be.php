@@ -7,10 +7,12 @@
     $email = $_POST['email'];
     $username = $_POST['username'];
     $contrasenia = $_POST['contrasenia'];
+    $pregunta = $_POST['opciones'];
+    $respuesta = $_POST['respuesta'];
 
 
 
-    $query = "INSERT INTO usuarios(nombre_completo, email, username, contrasenia) VALUES ('$nombre_completo', '$email', '$username', '$contrasenia')";
+    $query = "INSERT INTO usuarios(nombre_completo, email, username, contrasenia, pregunta_seguridad, respuesta) VALUES ('$nombre_completo', '$email', '$username', '$contrasenia', '$pregunta', '$respuesta')";
 
     //Verificar que el correo no se repita en la DB.
     $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email='$email'");

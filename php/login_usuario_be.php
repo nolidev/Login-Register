@@ -2,10 +2,10 @@
 
     include 'conexion_be.php';
 
-    $correo = $_POST['correo'];
-    $contrasena = $_POST['contrasena'];
+    $email = $_POST['email'];
+    $contrasenia = $_POST['contrasenia'];
 
-    $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' and contrasena='$contrasena'");
+    $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email='$email' and contrasenia='$contrasenia'");
 
     if(mysqli_num_rows($validar_login) > 0){
         echo '
@@ -18,7 +18,7 @@
         echo '
         <script>
         alert("El correo electrónico o la contraseña no son validos.");
-        window.location = "../index.html";
+        window.location = "../index.php";
         </script>
         ';
         exit;

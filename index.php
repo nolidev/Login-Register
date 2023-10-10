@@ -37,8 +37,8 @@
                 <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
 
                     <h2>Iniciar sesión</h2>
-                    <input type="text" placeholder="Correo Electrónico" name="correo">
-                    <input type="password" name="contrasena" placeholder="Contraseña">
+                    <input type="text" placeholder="Correo Electrónico" name="email">
+                    <input type="password" placeholder="Contraseña" name="contrasenia">
                     <button>Entrar</button>
                     <button id = "btn__forgotten_password">¿Olvidaste la contraseña?</button>
 
@@ -50,6 +50,13 @@
                     <input type="text" placeholder="Correo Electrónico" name="email">
                     <input type="text" placeholder="Usuario" name="username">
                     <input type="password" placeholder="Contraseña" name="contrasenia">
+                    <select id="opciones" name="opciones">
+                        <option value="">Pregunta de seguridad</option>
+                        <option value="opcion1">Opción 1</option>
+                        <option value="opcion2">Opción 2</option>
+                        <option value="opcion3">Opción 3</option>
+                    </select>
+                    <input type="text" placeholder="Respuesta" name="respuesta">
                     <button id = "btn__registrarse">Registrarse</button>
                 </form>
 

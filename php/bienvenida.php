@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/sweetAlert.js"></script> 
     <title>Bienvenid@!</title>
 </head>
@@ -18,7 +19,7 @@
                     text: "El inicio de sesión a la pagina fue exitoso!"
                 }).then(function() {
                     // Redirigir de regreso a la página de inicio
-                    window.location = "../index.html";
+                    window.location = "../index.php";
                 });
             </script>
 </body>
