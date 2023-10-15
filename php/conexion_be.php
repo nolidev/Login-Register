@@ -16,7 +16,6 @@ if ($conexion->connect_error) {
 // Crear la base de datos si no existe
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 if ($conexion->query($sql) === TRUE) {
-    echo "Base de datos creada exitosamente o ya existe\n";
 } else {
     echo "Error al crear la base de datos: " . $conexion->error . "\n";
 }
@@ -35,10 +34,15 @@ $sql = "CREATE TABLE IF NOT EXISTS usuarios (
         respuesta VARCHAR(50) NOT NULL
 )";
 if ($conexion->query($sql) === TRUE) {
-    echo "Tabla usuarios creada exitosamente o ya existe\n";
 } else {
     echo "Error al crear la tabla: " . $conexion->error . "\n";
 }
+
+
+
+
+
+
 
 
 ?>

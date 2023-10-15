@@ -5,6 +5,7 @@
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -15,6 +16,14 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+}
+/*Navbar*/
+
+
+
+
+h4{
+    color: #fff;
 }
 
 main{
@@ -97,6 +106,12 @@ main{
 
 
 .contenedor__login-register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 216, 254);
+}
+.contenedor__login-register form h4{
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
