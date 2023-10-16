@@ -62,9 +62,9 @@
                     <input type="password" placeholder="Contraseña" name="contrasenia">
                     <select id="opciones" name="opciones">
                         <option value="">Pregunta de seguridad</option>
-                        <option value="opcion1">Opción 1</option>
-                        <option value="opcion2">Opción 2</option>
-                        <option value="opcion3">Opción 3</option>
+                        <option value="opcion1">Equipo de futbol</option>
+                        <option value="opcion2">Mejor amigo de la infancia</option>
+                        <option value="opcion3">Nombre de la mascota</option>
                     </select>
                     <input type="text" placeholder="Respuesta" name="respuesta">
                     <button id = "btn__registrarse">Registrarse</button>
