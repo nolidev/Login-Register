@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "karmaland";
+$dbname = "karmaland2";
 
 // Crear conexión
 $conexion = new mysqli($servername, $username, $password);
@@ -24,7 +24,7 @@ if ($conexion->query($sql) === TRUE) {
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
         nombre_completo VARCHAR(50) NOT NULL,
         username VARCHAR(50) NOT NULL,
-        edad INT NOT NULL,
+        edad VARCHAR(20) NOT NULL,
         email VARCHAR(50) NOT NULL,
         contrasenia VARCHAR(50) NOT NULL,
         pregunta_seguridad VARCHAR(50) NOT NULL,
@@ -39,9 +39,9 @@ if ($conexion->query($sql) === TRUE) {
         if ($row['count'] == 0) {
             // Insertar datos precargados solo si la tabla está vacía
             $sql = "INSERT INTO usuarios (nombre_completo, username, edad, email, contrasenia, pregunta_seguridad, respuesta) VALUES
-('Nombre1 Apellido1', 'usuario1', 11, 'usuario1@example.com', 'contrasenia1', 'Pregunta1', 'Respuesta1'),
-('Nombre2 Apellido2', 'usuario2', 12, 'usuario2@example.com', 'contrasenia2', 'Pregunta2', 'Respuesta2'),
-('Nombre3 Apellido3', 'usuario3', 15, 'usuario3@example.com', 'contrasenia3', 'Pregunta3', 'Respuesta3')";
+('Nombre1 Apellido1', 'usuario1', '11', 'usuario1@example.com', 'contrasenia1', 'Pregunta1', 'Respuesta1'),
+('Nombre2 Apellido2', 'usuario2', '12', 'usuario2@example.com', 'contrasenia2', 'Pregunta2', 'Respuesta2'),
+('Nombre3 Apellido3', 'usuario3', '15', 'usuario3@example.com', 'contrasenia3', 'Pregunta3', 'Respuesta3')";
             if ($conexion->query($sql) === TRUE) {
                 //echo "Datos precargados insertados con éxito.";
             } else {

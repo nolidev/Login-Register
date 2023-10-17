@@ -41,6 +41,7 @@
                     <button class="show-password" id="showPasswordLogin" type="button" onclick="togglePasswordVisibility('inputId')">Mostrar Contraseña</button>
                     <br>
                     <button>Entrar</button>
+                    
                     <button id="btn__forgotten_password">¿Olvidaste la contraseña?</button>
                 </form>
                 <!-- Register -->
