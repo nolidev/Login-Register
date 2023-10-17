@@ -24,6 +24,7 @@ if ($conexion->query($sql) === TRUE) {
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
         nombre_completo VARCHAR(50) NOT NULL,
         username VARCHAR(50) NOT NULL,
+        edad INT NOT NULL,
         email VARCHAR(50) NOT NULL,
         contrasenia VARCHAR(50) NOT NULL,
         pregunta_seguridad VARCHAR(50) NOT NULL,
@@ -37,23 +38,23 @@ if ($conexion->query($sql) === TRUE) {
         $row = $result->fetch_assoc();
         if ($row['count'] == 0) {
             // Insertar datos precargados solo si la tabla está vacía
-            $sql = "INSERT INTO usuarios (nombre_completo, username, email, contrasenia, pregunta_seguridad, respuesta) VALUES
-                ('Nombre1 Apellido1', 'usuario1', 'usuario1@example.com', 'contrasenia1', 'Pregunta1', 'Respuesta1'),
-                ('Nombre2 Apellido2', 'usuario2', 'usuario2@example.com', 'contrasenia2', 'Pregunta2', 'Respuesta2'),
-                ('Nombre3 Apellido3', 'usuario3', 'usuario3@example.com', 'contrasenia3', 'Pregunta3', 'Respuesta3')";
+            $sql = "INSERT INTO usuarios (nombre_completo, username, edad, email, contrasenia, pregunta_seguridad, respuesta) VALUES
+('Nombre1 Apellido1', 'usuario1', 11, 'usuario1@example.com', 'contrasenia1', 'Pregunta1', 'Respuesta1'),
+('Nombre2 Apellido2', 'usuario2', 12, 'usuario2@example.com', 'contrasenia2', 'Pregunta2', 'Respuesta2'),
+('Nombre3 Apellido3', 'usuario3', 15, 'usuario3@example.com', 'contrasenia3', 'Pregunta3', 'Respuesta3')";
             if ($conexion->query($sql) === TRUE) {
-                echo "Datos precargados insertados con éxito.";
+                //echo "Datos precargados insertados con éxito.";
             } else {
-                echo "Error al insertar datos precargados: " . $conexion->error . "\n";
+                //echo "Error al insertar datos precargados: " . $conexion->error . "\n";
             }
         } else {
-            echo "Los datos precargados ya existen en la tabla.";
+            //echo "Los datos precargados ya existen en la tabla.";
         }
     } else {
-        echo "Error al crear la tabla: " . $conexion->error . "\n";
+        //echo "Error al crear la tabla: " . $conexion->error . "\n";
     }
 } else {
-    echo "Error al crear la base de datos: " . $conexion->error . "\n";
+    //echo "Error al crear la base de datos: " . $conexion->error . "\n";
 }
 
 ?>
