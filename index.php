@@ -45,32 +45,39 @@
                  Login 
                 <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
 
-                    <h4>karmaland</h4>
                     <h2>Iniciar sesión</h2>
                     <input type="text" placeholder="Correo Electrónico" name="email">
-                    <input type="password" placeholder="Contraseña" name="contrasenia">
+                    <input type="password" id="inputId" placeholder="Contraseña" name="contrasenia">
+                    <button class="show-password" id="showPasswordLogin" type="button" onclick="togglePasswordVisibility('inputId')">Mostrar Contraseña</button>
+                    <br>
                     <button>Entrar</button>
-                    <button id = "btn__forgotten_password">¿Olvidaste la contraseña?</button>
-
+                    
+                    <button id="btn__forgotten_password">¿Olvidaste la contraseña?</button>
                 </form>
                 Register 
                 <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                    <input type="text" placeholder="Edad" name="edad">
                     <input type="text" placeholder="Correo Electrónico" name="email">
                     <input type="text" placeholder="Usuario" name="username">
-                    <input type="password" placeholder="Contraseña" name="contrasenia">
+
+
+                    
+                    <input type="password" id="inputIdRegister" placeholder="Contraseña" name="contrasenia">
+                    <button class="show-password" id="showPasswordRegister" type="button" onclick="togglePasswordVisibility('inputIdRegister')">Mostrar Contraseña</button>
+
                     <select id="opciones" name="opciones">
                         <option value="">Pregunta de seguridad</option>
-                        <option value="opcion1">Equipo de futbol</option>
+                        <option value="opcion1">Equipo de fútbol</option>
                         <option value="opcion2">Mejor amigo de la infancia</option>
                         <option value="opcion3">Nombre de la mascota</option>
                     </select>
                     <input type="text" placeholder="Respuesta" name="respuesta">
                     <button id = "btn__registrarse">Registrarse</button>
-                </form> 
+                </form>
 
-
+<!-- 
                 <form action="recuperar.php" method="post" class = "formulario_recupero">
                     <label for="email">Correo Electrónico:</label>
                     <input type="email" name="email" required>
@@ -88,7 +95,8 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="assets/js/sweetAlert.js"></script>   -->
+    <script src="assets/js/sweetAlert.js"></script>  
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/passwordToggle.js"></script>
 </body>
 </html>
