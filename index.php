@@ -53,7 +53,7 @@
                     <button id = "btn__forgotten_password">¿Olvidaste la contraseña?</button>
 
                 </form>
-                <!-- Register 
+                Register 
                 <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" placeholder="Nombre completo" name="nombre_completo">
@@ -77,7 +77,7 @@
                     <label for="respuesta_seguridad">Respuesta a la Pregunta de Seguridad:</label>
                     <input type="text" name="respuesta_seguridad" required>
                     <button type="submit">Enviar</button>
-                </form> -->
+                </form>
                 
 
             </div>
