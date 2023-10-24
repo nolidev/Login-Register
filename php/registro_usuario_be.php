@@ -6,15 +6,18 @@
     $nombre_completo = $_POST['nombre_completo']; //Obtener valores de  name ='nombre_completo'
     $email = $_POST['email'];
     $username = $_POST['username'];
+    $edad = $_POST['edad'];
     $contrasenia = $_POST['contrasenia'];
     $pregunta = $_POST['opciones'];
     $respuesta = $_POST['respuesta'];
 
 
 
-    $query = "INSERT INTO usuarios(nombre_completo, email, username, contrasenia, pregunta_seguridad, respuesta) VALUES ('$nombre_completo', '$email', '$username', '$contrasenia', '$pregunta', '$respuesta')";
+    $query = "INSERT INTO usuarios(nombre_completo, email, username, edad, contrasenia, pregunta_seguridad, respuesta) VALUES ('$nombre_completo', '$email', '$username', '$edad', '$contrasenia', '$pregunta', '$respuesta')";
 
+    
     //Verificar que el correo no se repita en la DB.
+    /*
     $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email='$email'");
 
     if(mysqli_num_rows($verificar_correo) > 0){
@@ -26,6 +29,7 @@
         ';
         exit();
     }
+    */
 
      //Verificar que el nombre de usuario no se repita en la DB.
      $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE username='$username' ");
