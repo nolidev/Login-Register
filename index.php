@@ -47,6 +47,7 @@
                     <br>
                     <button>Entrar</button>
                     <button id="btn__forgotten_password">¿Olvidaste la contraseña?</button>
+                    <button id="btn__forgotten_user">¿Olvidaste tu usuario?</button>
                 </form>
 
                 <!-- Formulario de Registrarse -->
@@ -69,12 +70,21 @@
                 </form>
 
                 <!-- Formulario de Restablecer Contraseña -->
-                <form action="php/recuperar.php" method="POST" class="formulario__recuperar" style="display: none;">
+                <form action="php/recuperar_contraseña.php" method="POST" class="formulario__recuperar" style="display: none;">
                     <h2>Restablecer Contraseña</h2>
                     <input type="text" placeholder="Correo Electrónico" name="email">
                     <input type="text" placeholder="Respuesta de seguridad" name="respuesta_seguridad">
                     <input type="password" placeholder="Nueva Contraseña" name="nueva_contraseña">
                     <button type="submit">Restablecer Contraseña</button>
+                </form>
+
+                <!-- Formulario de recupero de User -->
+                <form action="php/recuperar_user.php" method="POST" class="formulario__recuperar_user" style="display: none;">
+                    <h2>Restablecer Usuario</h2>
+                    <input type="text" placeholder="Correo Electrónico" name="email">
+                    <input type="text" placeholder="Respuesta de seguridad" name="respuesta_seguridad">
+                    <input type="text" placeholder="Nuevo Usuario" name="nuevo_usuario">
+                    <button type="submit">Restablecer Usuario</button>
                 </form>
             </div>
         </div>
