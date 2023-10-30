@@ -56,17 +56,6 @@ $conexion->select_db($dbname);
         echo "Error al crear la tabla: " . $conexion->error . "\n";
     }
     
-    function actualizarContraseñaEnBD($correo, $nuevaContraseña) {
-        global $conexion;
-        // Hash de la nueva contraseña (deberías usar funciones de hash seguras en un entorno de producción)
-        $hashNuevaContraseña = password_hash($nuevaContraseña, PASSWORD_DEFAULT);
-        // Actualizar la contraseña en la base de datos
-        $sql = "UPDATE usuarios SET contrasenia = '$hashNuevaContraseña' WHERE email = '$correo'";
-        if ($conexion->query($sql) === TRUE) {
-            echo "Contraseña actualizada en la base de datos para el usuario: $correo";
-        } else {
-            echo "Error al actualizar la contraseña: " . $conexion->error;
-        }
-    }
+    
 
 ?>
