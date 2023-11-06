@@ -69,26 +69,21 @@
                     <button id="btn__registrarse">Registrarse</button>
                 </form>
 
-                <!-- Formulario de Restablecer Contraseña -->
-                <form action="php/recuperar_contraseña.php" method="POST" class="formulario__recuperar" style="display: none;">
-                    <h2>Restablecer Contraseña</h2>
-                    <input type="text" placeholder="Correo Electrónico" name="email">
-                    <input type="text" placeholder="Respuesta de seguridad" name="respuesta_seguridad">
-                    <input type="password" placeholder="Nueva Contraseña" name="nueva_contraseña">
-                    <button type="submit">Restablecer Contraseña</button>
-                </form>
 
-                <!-- Formulario de recupero de User -->
-                <form action="php/recuperar_user.php" method="POST" class="formulario__recuperar_user" style="display: none;">
-                    <h2>Restablecer Usuario</h2>
-                    <input type="text" placeholder="Correo Electrónico" name="email">
-                    <input type="text" placeholder="Respuesta de seguridad" name="respuesta_seguridad">
-                    <input type="text" placeholder="Nuevo Usuario" name="nuevo_usuario">
-                    <button type="submit">Restablecer Usuario</button>
-                </form>
+<!-- 
+                <form action="recuperar.php" method="post" class = "formulario_recupero">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" name="email" required>
+                    <label for="respuesta_seguridad">Respuesta a la Pregunta de Seguridad:</label>
+                    <input type="text" name="respuesta_seguridad" required>
+                    <button type="submit">Enviar</button>
+                </form> -->
+                
+
             </div>
         </div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/passwordToggle.js"></script>

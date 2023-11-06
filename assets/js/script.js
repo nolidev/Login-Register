@@ -1,7 +1,6 @@
 document.getElementById("btn__registrarse").addEventListener("click", register);
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__forgotten_password").addEventListener("click", contraseñaOlvidada);
-document.getElementById("btn__forgotten_user").addEventListener("click", usuarioOlvidado);
 
 window.addEventListener("resize", anchoPage);
 
